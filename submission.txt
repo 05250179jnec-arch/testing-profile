@@ -1,0 +1,4 @@
+Student Name: Kuenzang Lhamo
+Student ID: 05250179
+GitHub Repository Link: https://github.com/05250179jnec-arch/testing-profile
+Deployed Website Link: https://05250179jnec-arch.github.io/testing-profile/

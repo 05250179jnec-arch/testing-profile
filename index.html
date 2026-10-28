@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Kuenzang Lhamo — Diploma student in Computer System and Network at Jigme Namgyel Engineering College, Bhutan." />
+  <title>Kuenzang Lhamo | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-loading">
+  <!-- Boot-up intro (skips itself after ~2s; click to skip) -->
+  <div id="loader" aria-hidden="true">
+    <div class="boot">
+      <p class="boot-line"><span class="ok">[ OK ]</span> Initialising network interfaces...</p>
+      <p class="boot-line"><span class="ok">[ OK ]</span> Establishing eBGP session with AS 65001...</p>
+      <p class="boot-line"><span class="ok">[ OK ]</span> Applying ACL BANK-EDGE...</p>
+      <p class="boot-line"><span class="ok">[ OK ]</span> Loading portfolio: kuenzang_lhamo</p>
+      <div class="boot-bar"><span></span></div>
+    </div>
+  </div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <canvas id="netCanvas" aria-hidden="true"></canvas>
+
+  <!-- ===== Navigation ===== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav container">
+      <a href="#home" class="logo">KL<span>.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#lab" class="nav-link">Lab</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== 1. Home ===== -->
+    <section class="hero container" id="home">
+      <div class="hero-text reveal">
+        <p class="eyebrow"><span class="wave">👋</span> Hello, I'm</p>
+        <h1 class="hero-name"><span class="glitch" data-text="Kuenzang">Kuenzang</span> <span class="gradient-text">Lhamo</span></h1>
+        <p class="role-line">I <span class="role" id="role">build networks</span><span class="role-caret">|</span></p>
+        <h2 class="headline">Computer System &amp; Network Student <span class="accent">|</span> Aspiring Network &amp; Security Engineer</h2>
+        <p class="intro">
+          I'm a diploma student at Jigme Namgyel Engineering College, Bhutan, learning how networks are
+          designed, secured and automated, and building web applications along the way.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary btn-shine">View My Projects</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><span class="stat-num" data-count="7">0</span><span class="stat-label">Projects</span></div>
+          <div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-label">Certificates</span></div>
+          <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Languages</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbit-wrap">
+          <div class="ring"></div>
+          <div class="photo-wrap">
+            <img src="assets/profile.jpg" alt="Kuenzang Lhamo standing outdoors in a pink kira jacket" />
+          </div>
+          <div class="orbit" aria-hidden="true">
+            <span class="orbit-icon" style="--i:0" title="Routing"><svg viewBox="0 0 24 24"><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 16.5h.01M11 16.5h.01M8 9a6 6 0 0 1 8 0M5.5 6.5a10 10 0 0 1 13 0"/></svg></span>
+            <span class="orbit-icon" style="--i:1" title="Security"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <span class="orbit-icon" style="--i:2" title="Code"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
+            <span class="orbit-icon" style="--i:3" title="Database"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
+            <span class="orbit-icon" style="--i:4" title="Linux"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M13 15h4"/></svg></span>
+            <span class="orbit-icon" style="--i:5" title="Cloud"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .6-8A6 6 0 0 0 6 9.5 4.3 4.3 0 0 0 7 18z"/></svg></span>
+          </div>
+        </div>
+        <div class="terminal" id="terminal">
+          <div class="terminal-bar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="terminal-title">kuenzang@jnec: ~</span>
+          </div>
+          <div class="terminal-body" id="termBody">
+            <div id="termOutput" aria-live="polite">
+              <p class="out">Welcome! This is a working terminal.</p>
+              <p class="out">Type <span class="kw">help</span> to see what you can run.</p>
+            </div>
+            <form class="term-line" id="termForm" autocomplete="off">
+              <label for="termInput" class="prompt">kuenzang@jnec:~$</label>
+              <input id="termInput" type="text" spellcheck="false" autocapitalize="off" aria-label="Terminal command" />
+            </form>
+          </div>
+          <div class="term-chips" aria-label="Quick commands">
+            <button type="button" data-cmd="whoami">whoami</button>
+            <button type="button" data-cmd="skills">skills</button>
+            <button type="button" data-cmd="ping jnec.edu.bt">ping</button>
+            <button type="button" data-cmd="ipconfig">ipconfig</button>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <!-- ===== 2. About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">~/about</span>
+          <h2>About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a motivated and curious learner from Bhutan, currently pursuing a
+              <strong>Diploma in Computer System and Network</strong> at Jigme Namgyel Engineering College (2025 – Present).
+              I enjoy taking a problem apart, understanding how each piece works and then putting together a clear solution,
+              whether that's a routing configuration, a Linux server or a web page.
+            </p>
+            <p>
+              My interests sit where networking, cybersecurity and web development meet. In class I work with
+              Cisco Packet Tracer, BGP and ACLs, and Linux servers; outside class I practise cybersecurity through
+              Capture-the-Flag challenges on CyLab Security Academy and TryHackMe.
+            </p>
+            <p>
+              Beyond technology, I care about sustainability and cultural awareness, and I bring resilience, humour and
+              a collaborative spirit to every team I join.
+            </p>
+          </div>
+
+          <div class="about-cards reveal">
+            <div class="info-card">
+              <h3>🎯 Career Goal</h3>
+              <p>To grow into a network and security engineer who designs reliable, secure infrastructure for organisations in Bhutan.</p>
+            </div>
+            <div class="info-card">
+              <h3>💡 Interests</h3>
+              <p>Network design, cybersecurity &amp; CTFs, Linux administration, and web development.</p>
+            </div>
+            <div class="info-card">
+              <h3>📍 Based in</h3>
+              <p>Taba, Thimphu, Bhutan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Skills ===== -->
+    <section class="section alt" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">~/skills</span>
+          <h2>Skills</h2>
+        </div>
+
+        <div class="skills-toolbar reveal">
+          <div class="view-toggle" role="tablist" aria-label="Skills view">
+            <button type="button" class="view-btn active" data-view="map" role="tab" aria-selected="true">◎ Skill map</button>
+            <button type="button" class="view-btn" data-view="cards" role="tab" aria-selected="false">▦ Cards</button>
+          </div>
+          <label class="skill-search">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" id="skillSearch" placeholder="Search a skill, e.g. MySQL" autocomplete="off" list="skillList" aria-label="Search skills" />
+            <datalist id="skillList"></datalist>
+          </label>
+        </div>
+
+        <div class="skillmap-view reveal" id="skillmapView">
+          <div class="skillmap-stage">
+            <svg id="skillMap" viewBox="0 0 700 620" role="group" aria-label="Interactive skill map">
+              <g id="smLinks"></g>
+              <g id="smSkills"></g>
+              <g id="smHubs"></g>
+            </svg>
+            <p class="sm-hint">Click a circle to explore · click the centre to reset</p>
+          </div>
+          <aside class="skill-panel" id="skillPanel" aria-live="polite"></aside>
+        </div>
+
+        <div class="skills-cards" id="skillsCards" hidden>
+        <div class="filter-bar" role="tablist" aria-label="Filter skills">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="network">Networking</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="iot">IoT</button>
+          <button class="filter-btn" data-filter="security">Security</button>
+          <button class="filter-btn" data-filter="other">Tools &amp; Soft Skills</button>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-category="network">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M12 3v6M5 15v-3h14v3"/><rect x="9" y="3" width="6" height="4" rx="1"/><rect x="2" y="15" width="6" height="5" rx="1"/><rect x="16" y="15" width="6" height="5" rx="1"/></svg></div>
+            <h3>Networking</h3>
+            <ul class="tags">
+              <li>Cisco Packet Tracer</li><li>BGP / eBGP</li><li>Access Control Lists</li>
+              <li>DHCP</li><li>IP Addressing &amp; Subnetting</li><li>Routing &amp; Switching</li><li>Wireless LANs</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-category="network">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M13 15h4"/></svg></div>
+            <h3>Systems</h3>
+            <ul class="tags">
+              <li>Ubuntu Server</li><li>Linux Server Administration</li><li>Linux Command Line</li><li>VirtualBox</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-category="web">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div>
+            <h3>Web Development</h3>
+            <ul class="tags">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+              <li>Node.js &amp; Express</li><li>PHP &amp; Laravel</li><li>Python (Tkinter)</li><li>MySQL</li><li>REST APIs</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-category="web">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="9" r="2"/><path d="M6 7v10M18 11a6 6 0 0 1-6 6H8"/></svg></div>
+            <h3>Version Control</h3>
+            <ul class="tags">
+              <li>Git</li><li>GitHub</li><li>GitHub Pages</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-category="iot">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
+            <h3>IoT &amp; Electronics</h3>
+            <ul class="tags">
+              <li>Arduino Uno</li><li>Arduino IDE</li><li>PIR Sensor</li>
+              <li>Ultrasonic Sensor</li><li>Servo Motors</li><li>Relay Modules</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-category="security">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><rect x="9" y="11" width="6" height="5" rx="1"/><path d="M10 11V9a2 2 0 0 1 4 0v2"/></svg></div>
+            <h3>Cybersecurity</h3>
+            <ul class="tags">
+              <li>CTF Challenges</li><li>Digital Forensics (basics)</li>
+              <li>Reverse Engineering (basics)</li><li>TryHackMe</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-category="other">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg></div>
+            <h3>Productivity</h3>
+            <ul class="tags">
+              <li>Microsoft Word</li><li>Excel</li><li>PowerPoint</li>
+              <li>Google Docs, Sheets &amp; Forms</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-category="other">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+            <h3>Languages</h3>
+            <ul class="tags">
+              <li>English</li><li>Dzongkha</li><li>Nepali</li><li>Hindi</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-category="other">
+            <div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M14 20a4.5 4.5 0 0 1 8 0"/></svg></div>
+            <h3>Soft Skills</h3>
+            <ul class="tags">
+              <li>Leadership</li><li>Entrepreneurship</li><li>Time Management</li><li>Presentation</li>
+              <li>Teamwork</li><li>Analytical Thinking</li><li>Working Under Pressure</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>CCNA</span><span>Cisco Packet Tracer</span><span>eBGP</span><span>ACL</span><span>DHCP</span><span>Subnetting</span><span>Ubuntu Server</span><span>VirtualBox</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>Express</span><span>PHP</span><span>Laravel</span><span>Python</span><span>MySQL</span><span>Git</span><span>GitHub</span><span>Arduino</span><span>IoT</span><span>CTF</span><span>TryHackMe</span>
+          <span>CCNA</span><span>Cisco Packet Tracer</span><span>eBGP</span><span>ACL</span><span>DHCP</span><span>Subnetting</span><span>Ubuntu Server</span><span>VirtualBox</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>Express</span><span>PHP</span><span>Laravel</span><span>Python</span><span>MySQL</span><span>Git</span><span>GitHub</span><span>Arduino</span><span>IoT</span><span>CTF</span><span>TryHackMe</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Projects ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">~/projects</span>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article id="proj-autoconnection" class="project-card wide featured reveal">
+            <div class="wide-grid">
+              <div class="wide-text">
+                <div class="project-top">
+                  <span class="project-type">Full-Stack Web App · Team Project</span>
+                  <span class="status-badge"><span class="pulse-dot"></span>In progress</span>
+                </div>
+                <h3>AutoConnection — Auto Workshop Management System</h3>
+                <p>
+                  A web system that replaces a workshop's paper job cards with one database and a separate dashboard for
+                  each role. Customers book and track repairs online, mechanics manage their assigned jobs, and admins
+                  oversee stock, suppliers, staff and reports. A three-person team project at JNEC, built in Agile sprints.
+                </p>
+                <ul class="sub-projects">
+                  <li><strong>Customer</strong> — register, add vehicles, book a repair with photos, track its live status and buy spare parts.</li>
+                  <li><strong>Mechanic</strong> — see assigned repair orders, move them from Pending to In progress to Complete, and log parts used.</li>
+                  <li><strong>Admin</strong> — assign mechanics, manage inventory and suppliers, approve purchase orders and generate reports.</li>
+                  <li><strong>Security</strong> — passwords hashed with bcrypt, JWT login and role checks on every request.</li>
+                </ul>
+                <ul class="tech"><li>React</li><li>Node.js</li><li>Express</li><li>MySQL</li><li>JWT</li><li>bcrypt</li><li>Postman</li><li>Selenium</li><li>JMeter</li><li>Figma</li></ul>
+              </div>
+
+              <div class="wide-media">
+                <div class="ac-app" aria-hidden="true">
+                  <div class="ac-bar">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="ac-url">autoconnection / my-repairs</span>
+                  </div>
+                  <div class="ac-body">
+                    <div class="ac-side">
+                      <svg viewBox="0 0 40 46" class="ac-logo"><path d="M20 2l16 6v12c0 12-8 20-16 24C12 40 4 32 4 20V8z"/><path d="M12 24l6 6 10-12" class="tick"/></svg>
+                      <span class="ac-role r1">Customer</span>
+                      <span class="ac-role r2">Mechanic</span>
+                      <span class="ac-role r3">Admin</span>
+                    </div>
+                    <div class="ac-main">
+                      <div class="ac-job">
+                        <div>
+                          <p class="ac-job-title">Booking #AC-1042 · Brake service</p>
+                          <p class="ac-job-sub">Toyota · BP-1-A2345</p>
+                        </div>
+                        <span class="ac-status"><span class="s1">Pending</span><span class="s2">In progress</span><span class="s3">Complete</span></span>
+                      </div>
+                      <div class="ac-track">
+                        <div class="ac-line"><i></i></div>
+                        <div class="ac-step st1"><span></span>Received</div>
+                        <div class="ac-step st2"><span></span>Diagnosed</div>
+                        <div class="ac-step st3"><span></span>In repair</div>
+                        <div class="ac-step st4"><span></span>Ready</div>
+                      </div>
+                      <div class="ac-cards">
+                        <div class="ac-card"><b>12</b><small>Repairs</small></div>
+                        <div class="ac-card warn"><b>3</b><small>Low stock</small></div>
+                        <div class="ac-card"><b>5</b><small>Mechanics</small></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article id="proj-events" class="project-card reveal">
+            <div class="project-top">
+              <span class="project-type">Web Development</span>
+            </div>
+            <div class="project-art">
+              <svg viewBox="0 0 320 140" class="art">
+                <rect x="40" y="14" width="240" height="116" rx="8" class="a-frame"/>
+                <rect x="40" y="14" width="240" height="18" rx="8" class="a-bar"/>
+                <circle cx="52" cy="23" r="3" class="a-dot r"/><circle cx="62" cy="23" r="3" class="a-dot y"/><circle cx="72" cy="23" r="3" class="a-dot g"/>
+                <rect x="54" y="42" width="90" height="8" rx="4" class="a-fill"/>
+                <g class="a-cards">
+                  <rect x="54" y="60" width="64" height="56" rx="6" class="a-card c1"/>
+                  <rect x="128" y="60" width="64" height="56" rx="6" class="a-card c2"/>
+                  <rect x="202" y="60" width="64" height="56" rx="6" class="a-card c3"/>
+                </g>
+                <rect x="62" y="70" width="20" height="20" rx="4" class="a-fill"/><rect x="136" y="70" width="20" height="20" rx="4" class="a-fill"/><rect x="210" y="70" width="20" height="20" rx="4" class="a-fill"/>
+                <rect x="62" y="98" width="44" height="5" rx="2.5" class="a-line"/><rect x="136" y="98" width="44" height="5" rx="2.5" class="a-line"/><rect x="210" y="98" width="44" height="5" rx="2.5" class="a-line"/>
+              </svg>
+            </div>
+            <h3>JNEC Events Hub</h3>
+            <p>
+              A multi-page website for discovering and registering for college events at Jigme Namgyel Engineering College,
+              with Home, Events, Register, Gallery and Contact pages and a responsive layout.
+            </p>
+            <ul class="tech"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/05250179jnec-arch/events_hub" target="_blank" rel="noopener" class="link">GitHub Repo ↗</a>
+            </div>
+          </article>
+
+          <article id="proj-task" class="project-card reveal">
+            <div class="project-top">
+              <span class="project-type">Full-Stack</span>
+            </div>
+            <div class="project-art">
+              <svg viewBox="0 0 320 140" class="art">
+                <rect x="20" y="40" width="70" height="60" rx="8" class="a-frame"/><text x="55" y="76" class="a-label">Client</text>
+                <rect x="125" y="40" width="70" height="60" rx="8" class="a-frame accent"/><text x="160" y="70" class="a-label">Express</text><text x="160" y="84" class="a-sub">REST API</text>
+                <g transform="translate(230 38)"><ellipse cx="35" cy="8" rx="32" ry="8" class="a-frame"/><path d="M3 8v48c0 4.4 14.3 8 32 8s32-3.6 32-8V8" class="a-frame"/><text x="35" y="42" class="a-label">MySQL</text></g>
+                <path d="M90 62h35M195 62h35" class="a-wire"/><path d="M125 78H90M230 78h-35" class="a-wire"/>
+                <circle r="4" class="a-pkt"><animateMotion dur="2.4s" repeatCount="indefinite" path="M90 62h140"/></circle>
+                <circle r="4" class="a-pkt alt"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M230 78H90"/></circle>
+                <text x="108" y="56" class="a-sub">GET</text><text x="210" y="94" class="a-sub">rows</text>
+              </svg>
+            </div>
+            <h3>Task Manager (Task API Frontend)</h3>
+            <p>
+              A task-management frontend connected to a REST API built with Express and a cloud MySQL database on Aiven,
+              letting users create, view, update and delete tasks stored in the database. Built step by step with Git commits.
+            </p>
+            <ul class="tech"><li>JavaScript</li><li>Node.js</li><li>Express</li><li>MySQL (Aiven)</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/05250179jnec-arch/TaskAPIs" target="_blank" rel="noopener" class="link">GitHub Repo ↗</a>
+            </div>
+          </article>
+
+          <article id="proj-bank" class="project-card reveal">
+            <div class="project-top">
+              <span class="project-type">Network Design</span>
+            </div>
+            <div class="project-art">
+              <svg viewBox="0 0 320 140" class="art">
+                <path d="M60 70H130M190 70h70M160 50V22M160 90v28" class="a-wire"/>
+                <circle cx="40" cy="70" r="20" class="a-frame"/><text x="40" y="74" class="a-label">ISP</text>
+                <circle cx="160" cy="70" r="24" class="a-frame accent a-pulse"/><text x="160" y="68" class="a-label">R1</text><text x="160" y="80" class="a-sub">ACL</text>
+                <rect x="262" y="54" width="44" height="32" rx="6" class="a-frame"/><text x="284" y="74" class="a-label">LAN</text>
+                <rect x="138" y="4" width="44" height="18" rx="4" class="a-frame"/><text x="160" y="16" class="a-sub">WEB</text>
+                <rect x="138" y="118" width="44" height="18" rx="4" class="a-frame"/><text x="160" y="130" class="a-sub">DB</text>
+                <text x="95" y="62" class="a-sub">eBGP</text>
+                <circle r="4" class="a-pkt"><animateMotion dur="1.8s" repeatCount="indefinite" path="M60 70H136"/></circle>
+                <circle r="4" class="a-pkt alt"><animateMotion dur="1.8s" begin=".9s" repeatCount="indefinite" path="M184 70h78"/></circle>
+                <circle r="4" class="a-pkt deny"><animateMotion dur="2.6s" repeatCount="indefinite" path="M160 94v24"/></circle>
+              </svg>
+            </div>
+            <h3>Bank Network with eBGP &amp; ACLs</h3>
+            <p>
+              Designed and simulated a bank's network connected to a single ISP, using eBGP to exchange routes with the ISP
+              and Access Control Lists to filter traffic. Documented in a technical report and defended in a viva.
+            </p>
+            <ul class="tech"><li>Cisco Packet Tracer</li><li>eBGP</li><li>ACL</li></ul>
+            <div class="project-links">
+              <span class="link muted">Packet Tracer file &amp; report available on request</span>
+            </div>
+          </article>
+
+          <article id="proj-dhcp" class="project-card reveal">
+            <div class="project-top">
+              <span class="project-type">Systems Lab</span>
+            </div>
+            <div class="project-art">
+              <svg viewBox="0 0 320 140" class="art">
+                <rect x="20" y="40" width="70" height="60" rx="8" class="a-frame"/><text x="55" y="68" class="a-label">Client</text><text x="55" y="82" class="a-sub">0.0.0.0</text>
+                <rect x="230" y="40" width="70" height="60" rx="8" class="a-frame accent"/><text x="265" y="68" class="a-label">DHCP</text><text x="265" y="82" class="a-sub">Ubuntu</text>
+                <g class="dora">
+                  <g class="d1"><path d="M95 28h130" class="a-arrow"/><text x="160" y="22" class="a-sub">DISCOVER</text></g>
+                  <g class="d2"><path d="M225 58H95" class="a-arrow"/><text x="160" y="52" class="a-sub">OFFER</text></g>
+                  <g class="d3"><path d="M95 88h130" class="a-arrow"/><text x="160" y="82" class="a-sub">REQUEST</text></g>
+                  <g class="d4"><path d="M225 118H95" class="a-arrow"/><text x="160" y="112" class="a-sub">ACK · 192.168.10.25</text></g>
+                </g>
+              </svg>
+            </div>
+            <h3>DHCP Server Setup &amp; Verification</h3>
+            <p>
+              Group practical (Group 7) where we configured a DHCP server on Ubuntu Server virtual machines, then tested and
+              verified automatic IP address assignment to client machines. Presented our findings to the class.
+            </p>
+            <ul class="tech"><li>Ubuntu Server</li><li>VirtualBox</li><li>DHCP</li></ul>
+            <div class="project-links">
+              <span class="link muted">Group presentation — Unit IV</span>
+            </div>
+          </article>
+
+          <article id="proj-iot" class="project-card wide reveal">
+            <div class="wide-grid">
+              <div class="wide-text">
+                <div class="project-top">
+                  <span class="project-type">IoT · Embedded Systems</span>
+                </div>
+                <h3>Smart Room Automation with Arduino</h3>
+                <p>
+                  A mini project of three Arduino Uno systems that show how sensors, actuators and a microcontroller work
+                  together to automate a room, with energy-saving and touch-free designs for homes and public spaces.
+                </p>
+                <ul class="sub-projects">
+                  <li><strong>Smart Room Lighting</strong> — a PIR motion sensor detects a person and the Arduino switches an AC bulb through a relay module.</li>
+                  <li><strong>Smart Dustbin</strong> — an HC-SR04 ultrasonic sensor detects a hand and a servo motor opens the lid.</li>
+                  <li><strong>Automatic Door</strong> — the ultrasonic sensor detects a person approaching and a servo opens and closes the door.</li>
+                </ul>
+                <ul class="tech"><li>Arduino Uno</li><li>Arduino IDE (C++)</li><li>PIR Sensor</li><li>HC-SR04</li><li>Servo Motor</li><li>Relay Module</li></ul>
+              </div>
+
+              <div class="wide-media">
+                <div class="project-art">
+                  <svg viewBox="0 0 320 170" class="art iot-art">
+                    <!-- wires -->
+                    <path d="M86 52h40" class="a-wire"/>
+                    <path d="M86 118h40" class="a-wire"/>
+                    <path d="M194 52h34" class="a-wire"/>
+                    <path d="M194 118h34" class="a-wire"/>
+                    <!-- sensors -->
+                    <g transform="translate(26 30)">
+                      <rect width="60" height="44" rx="8" class="a-frame"/>
+                      <circle cx="30" cy="18" r="11" class="pir-dome"/>
+                      <text x="30" y="40" class="a-sub">PIR</text>
+                    </g>
+                    <circle cx="20" cy="52" r="6" class="motion-ring"/>
+                    <g transform="translate(26 96)">
+                      <rect width="60" height="44" rx="8" class="a-frame"/>
+                      <circle cx="18" cy="18" r="9" class="sonic"/><circle cx="42" cy="18" r="9" class="sonic"/>
+                      <text x="30" y="40" class="a-sub">HC-SR04</text>
+                    </g>
+                    <path d="M18 114 a10 10 0 0 0 0 12 M12 110 a18 18 0 0 0 0 20" class="sonic-wave"/>
+                    <!-- arduino -->
+                    <g transform="translate(126 30)">
+                      <rect width="68" height="110" rx="8" class="a-frame accent"/>
+                      <rect x="16" y="38" width="36" height="28" rx="3" class="chip"/>
+                      <g class="pins"><rect x="8" y="8" width="52" height="5" rx="2"/><rect x="8" y="97" width="52" height="5" rx="2"/></g>
+                      <circle cx="56" cy="24" r="3" class="led"/>
+                      <text x="34" y="84" class="a-label">UNO</text>
+                    </g>
+                    <!-- bulb -->
+                    <g transform="translate(228 28)">
+                      <circle cx="26" cy="22" r="26" class="bulb-glow"/>
+                      <path d="M16 22a10 10 0 1 1 20 0c0 5-4 7-4 11h-12c0-4-4-6-4-11z" class="bulb"/>
+                      <rect x="20" y="36" width="12" height="6" rx="2" class="a-line"/>
+                      <text x="26" y="58" class="a-sub">relay → bulb</text>
+                    </g>
+                    <!-- servo -->
+                    <g transform="translate(232 100)">
+                      <rect width="44" height="30" rx="6" class="a-frame"/>
+                      <g class="servo-arm"><rect x="20" y="10" width="34" height="6" rx="3" class="a-fill"/><circle cx="22" cy="13" r="5" class="a-fill alt"/></g>
+                      <text x="22" y="44" class="a-sub">servo</text>
+                    </g>
+                    <circle r="3.5" class="a-pkt"><animateMotion dur="2s" repeatCount="indefinite" path="M86 52h40"/></circle>
+                    <circle r="3.5" class="a-pkt"><animateMotion dur="2s" begin="1s" repeatCount="indefinite" path="M194 52h34"/></circle>
+                    <circle r="3.5" class="a-pkt alt"><animateMotion dur="2s" begin=".5s" repeatCount="indefinite" path="M86 118h40"/></circle>
+                    <circle r="3.5" class="a-pkt alt"><animateMotion dur="2s" begin="1.5s" repeatCount="indefinite" path="M194 118h34"/></circle>
+                  </svg>
+                </div>
+
+                <p class="gallery-label">Circuit diagrams &amp; system flow — click to enlarge</p>
+                <div class="iot-gallery">
+                  <button type="button" class="photo-thumb" data-full="assets/iot/light-circuit.jpg" data-title="Smart Room Lighting — PIR sensor, relay and bulb circuit"><img src="assets/iot/light-circuit.jpg" alt="Circuit: PIR sensor and relay wired to an Arduino Uno and AC bulb" loading="lazy" /></button>
+                  <button type="button" class="photo-thumb" data-full="assets/iot/servo-circuit.jpg" data-title="Ultrasonic sensor and servo circuit (dustbin and door)"><img src="assets/iot/servo-circuit.jpg" alt="Circuit: HC-SR04 ultrasonic sensor and servo motor wired to an Arduino Uno" loading="lazy" /></button>
+                  <button type="button" class="photo-thumb" data-full="assets/iot/light-flow.jpg" data-title="System flow — Smart Room Lighting"><img src="assets/iot/light-flow.jpg" alt="System flow diagram for the smart lighting system" loading="lazy" /></button>
+                  <button type="button" class="photo-thumb" data-full="assets/iot/dustbin-flow.jpg" data-title="System flow — Smart Dustbin"><img src="assets/iot/dustbin-flow.jpg" alt="System flow diagram for the smart dustbin" loading="lazy" /></button>
+                  <button type="button" class="photo-thumb" data-full="assets/iot/door-flow.jpg" data-title="System flow — Automatic Door"><img src="assets/iot/door-flow.jpg" alt="System flow diagram for the automatic door" loading="lazy" /></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="proj-druk" class="project-card wide hackathon reveal">
+            <div class="wide-grid">
+              <div class="wide-text">
+                <div class="project-top">
+                  <span class="project-type">Hackathon · Startup Pitch</span>
+                  <span class="status-badge hack">JNEC Campus Hackathon · Team Raven</span>
+                </div>
+                <h3>DRUK SPORTS — Connecting Youth to Pro Pathways</h3>
+                <p>
+                  Built and pitched with Team Raven at JNEC's campus hackathon, run by the Department of Information Technology
+                  to encourage software, hardware and collaborative engineering projects among students.
+                  DRUK SPORTS is a digital + physical football development platform for Bhutan, where many young football
+                  talents never get discovered because there is no structured coaching or clear pathway to higher-level football.
+                </p>
+                <ul class="sub-projects">
+                  <li><strong>Platform</strong> — connects players with certified coaches through digital registration, smart matching and flexible session booking.</li>
+                  <li><strong>Pathway</strong> — structured training programs and organised local tournaments for exposure and a career route for youth athletes.</li>
+                  <li><strong>Business model</strong> — monthly training subscriptions, corporate sponsorships and tournament event fees.</li>
+                </ul>
+                <div class="ds-stats">
+                  <div><b data-count="88">0</b><span>of parents want structured training</span></div>
+                  <div><b data-count="92">0</b><span>of players want app access</span></div>
+                  <div><b>Nu.1000</b><span>/ month target price confirmed</span></div>
+                </div>
+                <p class="ds-note">Pilot survey of 100 participants in Thimphu and Paro.</p>
+                <ul class="tech"><li>Web Platform</li><li>Marketplace Model</li><li>Business Pitch</li><li>Market Research</li><li>Teamwork</li></ul>
+              </div>
+
+              <div class="wide-media">
+                <div class="ds-carousel" id="dsCarousel">
+                  <div class="ds-stage">
+                    <button type="button" class="ds-slide active photo-thumb" data-full="assets/druk/cover.jpg" data-title="DRUK SPORTS — Cover — DRUK SPORTS: Connecting Youth to Pro Pathways" aria-label="Open slide: Cover — DRUK SPORTS: Connecting Youth to Pro Pathways">
+                      <img src="assets/druk/cover.jpg" alt="DRUK SPORTS pitch slide: Cover — DRUK SPORTS: Connecting Youth to Pro Pathways" loading="lazy" />
+                    </button>
+                    <button type="button" class="ds-slide photo-thumb" data-full="assets/druk/problem.jpg" data-title="DRUK SPORTS — Problem — young football talent in Bhutan goes undiscovered" aria-label="Open slide: Problem — young football talent in Bhutan goes undiscovered">
+                      <img src="assets/druk/problem.jpg" alt="DRUK SPORTS pitch slide: Problem — young football talent in Bhutan goes undiscovered" loading="lazy" />
+                    </button>
+                    <button type="button" class="ds-slide photo-thumb" data-full="assets/druk/solution.jpg" data-title="DRUK SPORTS — Solution — a digital + physical football development platform" aria-label="Open slide: Solution — a digital + physical football development platform">
+                      <img src="assets/druk/solution.jpg" alt="DRUK SPORTS pitch slide: Solution — a digital + physical football development platform" loading="lazy" />
+                    </button>
+                    <button type="button" class="ds-slide photo-thumb" data-full="assets/druk/business-model.jpg" data-title="DRUK SPORTS — Business model — training fees, sponsorships and event fees" aria-label="Open slide: Business model — training fees, sponsorships and event fees">
+                      <img src="assets/druk/business-model.jpg" alt="DRUK SPORTS pitch slide: Business model — training fees, sponsorships and event fees" loading="lazy" />
+                    </button>
+                    <button type="button" class="ds-slide photo-thumb" data-full="assets/druk/market-demand.jpg" data-title="DRUK SPORTS — Market demand — pilot survey of 100 participants" aria-label="Open slide: Market demand — pilot survey of 100 participants">
+                      <img src="assets/druk/market-demand.jpg" alt="DRUK SPORTS pitch slide: Market demand — pilot survey of 100 participants" loading="lazy" />
+                    </button>
+                    <button type="button" class="ds-slide photo-thumb" data-full="assets/druk/timeline.jpg" data-title="DRUK SPORTS — Timeline — from MVP pilot to nationwide scaling" aria-label="Open slide: Timeline — from MVP pilot to nationwide scaling">
+                      <img src="assets/druk/timeline.jpg" alt="DRUK SPORTS pitch slide: Timeline — from MVP pilot to nationwide scaling" loading="lazy" />
+                    </button>
+                  </div>
+                  <div class="ds-controls">
+                    <button type="button" class="ds-arrow" id="dsPrev" aria-label="Previous slide">‹</button>
+                    <div class="ds-dots"><button type="button" class="ds-dot active" aria-label="Show slide 1"></button><button type="button" class="ds-dot" aria-label="Show slide 2"></button><button type="button" class="ds-dot" aria-label="Show slide 3"></button><button type="button" class="ds-dot" aria-label="Show slide 4"></button><button type="button" class="ds-dot" aria-label="Show slide 5"></button><button type="button" class="ds-dot" aria-label="Show slide 6"></button></div>
+                    <button type="button" class="ds-arrow" id="dsNext" aria-label="Next slide">›</button>
+                  </div>
+                </div>
+                <p class="gallery-label">Pitch deck — auto-plays, click a slide to enlarge</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== Lab: tools built in this page ===== -->
+    <section class="section alt" id="lab">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">~/lab</span>
+          <h2>Network Lab</h2>
+        </div>
+        <p class="lab-intro reveal">Small tools I built into this portfolio with JavaScript, using what I've learned in my networking courses. Try them out.</p>
+
+        <div class="lab-grid">
+          <!-- Subnet calculator -->
+          <div id="lab-subnet" class="lab-card reveal">
+            <div class="lab-head">
+              <h3>IPv4 Subnet Calculator</h3>
+              <span class="badge">JavaScript · bitwise ops</span>
+            </div>
+            <form id="subnetForm" class="subnet-form" autocomplete="off">
+              <div class="subnet-inputs">
+                <input type="text" id="ipInput" value="192.168.10.25" aria-label="IP address" spellcheck="false" />
+                <span class="slash">/</span>
+                <input type="number" id="cidrInput" value="26" min="0" max="32" aria-label="CIDR prefix length" />
+                <button type="submit" class="btn btn-primary">Calculate</button>
+              </div>
+              <small class="error" id="subnetError"></small>
+            </form>
+            <dl class="subnet-result" id="subnetResult"></dl>
+            <div class="bits" id="bitsView" aria-label="Binary view of the address"></div>
+            <p class="bits-legend"><span class="key net"></span> network bits <span class="key host"></span> host bits</p>
+          </div>
+
+          <!-- Packet travel / ACL simulator -->
+          <div id="lab-acl" class="lab-card reveal">
+            <div class="lab-head">
+              <h3>ACL Packet Simulator</h3>
+              <span class="badge">Inspired by my eBGP &amp; ACL project</span>
+            </div>
+            <p class="lab-note">An extended ACL on the bank's edge router. Pick a packet and watch the router check it against each rule, top to bottom.</p>
+            <pre class="acl" id="aclRules"></pre>
+            <div class="acl-controls">
+              <label for="packetSelect">Packet</label>
+              <select id="packetSelect">
+                <option value="0">Staff PC → Web server, TCP 443 (HTTPS)</option>
+                <option value="1">Internet host → DB server, TCP 3306 (MySQL)</option>
+                <option value="2">Staff PC → DB server, TCP 3306 (MySQL)</option>
+                <option value="3">Internet host → Web server, TCP 23 (Telnet)</option>
+              </select>
+              <button type="button" class="btn btn-outline" id="aclRun">Send packet</button>
+            </div>
+            <div class="topo" aria-hidden="true">
+              <span class="node">Source</span>
+              <span class="wire"><span class="packet" id="packet"></span></span>
+              <span class="node router">R1 · ACL</span>
+              <span class="wire"><span class="packet" id="packet2"></span></span>
+              <span class="node">Destination</span>
+            </div>
+            <p class="acl-verdict" id="aclVerdict" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Education ===== -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">~/education</span>
+          <h2>Education &amp; Training</h2>
+        </div>
+
+        <div class="edu-grid">
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <span class="timeline-date">2025 – Present</span>
+              <h3>Diploma in Computer System and Network</h3>
+              <p>Jigme Namgyel Engineering College, Dewathang</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2024</span>
+              <h3>Higher Secondary (Class XII)</h3>
+              <p>Debsi Higher Secondary School, Bhutan</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2020</span>
+              <h3>Secondary School</h3>
+              <p>Drukgyel Higher Secondary School, Bhutan</p>
+            </div>
+          </div>
+
+          <div class="certs reveal">
+            <h3 class="sub-head">Training Programs</h3>
+            <div class="cert-card">
+              <h4>Digital Training Program</h4>
+              <p>Funded by GovTech Agency, delivered by Athang Training Academy</p>
+              <span>12-day course · 19 – 31 May 2025</span>
+            </div>
+            <div class="cert-card">
+              <h4>Advanced Career Strategy: Gaining a Competitive Edge</h4>
+              <p>Career development course</p>
+              <span>7-day course · 22 – 28 March 2025</span>
+            </div>
+            <div id="training-eldp" class="cert-card">
+              <h4>Entrepreneurial Leadership Development Program (ELDP)</h4>
+              <p>Organised by Yangbum Cooperative. Built an entrepreneurial mindset and learned the skills and tools to plan and grow sustainable businesses.</p>
+              <span>Leadership &amp; entrepreneurship training · 2026</span>
+              <div class="cert-photos">
+                <button type="button" class="photo-thumb" data-full="assets/experience/eldp-session.jpg" data-title="ELDP 2026 — participant presentation session" aria-label="Open photo: ELDP presentation session">
+                  <img src="assets/experience/eldp-session.jpg" alt="Participants listening to a presentation during the ELDP session" loading="lazy" />
+                  <span class="cert-zoom">⤢ View</span>
+                </button>
+                <button type="button" class="photo-thumb" data-full="assets/experience/eldp-mentors.jpg" data-title="ELDP 2026 — mentors following the presentations" aria-label="Open photo: ELDP mentors">
+                  <img src="assets/experience/eldp-mentors.jpg" alt="Two ELDP mentors listening during a session" loading="lazy" />
+                  <span class="cert-zoom">⤢ View</span>
+                </button>
+              </div>
+            </div>
+
+            <h3 class="sub-head">Achievements &amp; Activities</h3>
+            <ul class="achievements">
+              <li>Participant, JNEC Campus Hackathon — built and pitched DRUK SPORTS with Team Raven</li>
+              <li><strong>1st Place (Winner), National CTF 2026</strong> — cybersecurity Capture the Flag organised by GovTech Agency, with my JNEC team</li>
+              <li>3rd Place, 400m House Race — Certificate of Recognition (April 2024)</li>
+              <li>Certificate of Appreciation for 100% participation in school activities (2021)</li>
+              <li>Participant, Cross Country Championship, Drukgyel HSS (2022)</li>
+              <li>Active Scout member (2022) and school literary club member</li>
+              <li>Organised school cultural programmes and served as class representative</li>
+              <li>Volunteered in community clean-up and awareness programmes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ===== Experience ===== -->
+    <section class="section alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">~/experience</span>
+          <h2>Experience</h2>
+        </div>
+
+        <article id="exp-tour" class="exp-card reveal">
+          <div class="exp-info">
+            <div class="exp-top">
+              <span class="exp-badge tour">Study Tour</span>
+              <span class="exp-date">Oct 2026</span>
+            </div>
+            <h3>Industry Study Tour — Bhutan's ICT Sector</h3>
+            <p class="exp-org">Organised through Jigme Namgyel Engineering College</p>
+            <p>
+              Visited <strong>GovTech, the IT Park, aBIT, NUK9, Dragon Coders and Selise</strong> to see how government
+              agencies and private software companies work. Walking into real offices and hearing how teams solve problems
+              made what we study in class feel real.
+            </p>
+            <ul class="exp-points">
+              <li>Learned how organisations manage their networks, servers and data security</li>
+              <li>Saw why reliable systems and cybersecurity matter, from government services to software companies</li>
+              <li>Saw how young Bhutanese developers build real products as professional teams</li>
+              <li>Realised communication, teamwork and continuous learning matter as much as technical skills</li>
+            </ul>
+            <ul class="tech"><li>Industry Exposure</li><li>Networking &amp; Servers</li><li>Cybersecurity</li><li>Teamwork</li></ul>
+          </div>
+
+          <div class="tour-media">
+            <div class="tour-visual" aria-hidden="true">
+            <svg viewBox="0 0 375 175">
+              <text x="187" y="22" class="caption">6 organisations · 1 tour</text>
+              <path id="tourRoute" d="M35 118 L95 66 L158 118 L220 66 L285 118 L340 66" class="tour-route"/>
+              <path d="M35 118 L95 66 L158 118 L220 66 L285 118 L340 66" pathLength="100" class="tour-route-glow"/>
+                <g class="stop" style="--k:0"><circle cx="35" cy="118" r="9" class="stop-ring"/><circle cx="35" cy="118" r="4.5" class="stop-dot"/><text x="35" y="146" class="stop-name">GovTech</text></g>
+                <g class="stop" style="--k:1"><circle cx="95" cy="66" r="9" class="stop-ring"/><circle cx="95" cy="66" r="4.5" class="stop-dot"/><text x="95" y="49" class="stop-name">IT Park</text></g>
+                <g class="stop" style="--k:2"><circle cx="158" cy="118" r="9" class="stop-ring"/><circle cx="158" cy="118" r="4.5" class="stop-dot"/><text x="158" y="146" class="stop-name">aBIT</text></g>
+                <g class="stop" style="--k:3"><circle cx="220" cy="66" r="9" class="stop-ring"/><circle cx="220" cy="66" r="4.5" class="stop-dot"/><text x="220" y="49" class="stop-name">NUK9</text></g>
+                <g class="stop" style="--k:4"><circle cx="285" cy="118" r="9" class="stop-ring"/><circle cx="285" cy="118" r="4.5" class="stop-dot"/><text x="285" y="146" class="stop-name">Dragon Coders</text></g>
+                <g class="stop" style="--k:5"><circle cx="340" cy="66" r="9" class="stop-ring"/><circle cx="340" cy="66" r="4.5" class="stop-dot"/><text x="340" y="49" class="stop-name">Selise</text></g>
+              <g class="tour-bus">
+                <rect x="-11" y="-7" width="22" height="13" rx="3"/>
+                <rect x="-8" y="-4" width="6" height="4" rx="1" class="win"/><rect x="1" y="-4" width="6" height="4" rx="1" class="win"/>
+                <animateMotion dur="7s" repeatCount="indefinite"><mpath href="#tourRoute"/></animateMotion>
+              </g>
+            </svg>
+          </div>
+            <div class="tour-gallery">
+              <button type="button" class="photo-thumb" data-full="assets/experience/tour-techpark.jpg" data-title="Study tour group at Thimphu TechPark" aria-label="Open photo: study tour group at Thimphu TechPark">
+                <img src="assets/experience/tour-techpark.jpg" alt="Students in Bhutanese dress outside the Thimphu TechPark building" loading="lazy" />
+                <span class="cert-zoom">⤢ View</span>
+              </button>
+              <button type="button" class="photo-thumb" data-full="assets/experience/tour-company-visit.jpg" data-title="Visiting a software company office during the study tour" aria-label="Open photo: company office visit">
+                <img src="assets/experience/tour-company-visit.jpg" alt="Students gathered in a software company office during the study tour" loading="lazy" />
+                <span class="cert-zoom">⤢ View</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article id="exp-prf" class="exp-card reveal">
+          <div class="exp-info">
+            <div class="exp-top">
+              <span class="exp-badge">Volunteer</span>
+              <span class="exp-date">15 – 17 Sep 2026</span>
+            </div>
+            <h3>Student Volunteer — 26th APT Policy and Regulatory Forum (PRF-26)</h3>
+            <p class="exp-org">Asia-Pacific Telecommunity · hosted at Le Méridien, Paro, Bhutan</p>
+            <p>
+              Selected as a student volunteer for PRF-26, an international forum on policy and regulation in the
+              ICT and telecommunications sector. I worked alongside the <strong>Protocol Team of the GovTech Agency</strong>,
+              supervised by GovTech officials, to help the three-day event run smoothly.
+            </p>
+            <ul class="exp-points">
+              <li>Supported the GovTech protocol team throughout the forum's sessions and events</li>
+              <li>Gained hands-on exposure to organising and facilitating an international event</li>
+              <li>Learned about current developments and emerging issues in ICT and telecommunications</li>
+              <li>Networked with delegates, officials and fellow volunteers</li>
+            </ul>
+            <ul class="tech"><li>Event Coordination</li><li>Protocol</li><li>Teamwork</li><li>ICT Policy</li></ul>
+          </div>
+
+          <div class="exp-gallery">
+            <button type="button" class="photo-thumb main" data-full="assets/experience/prf26-volunteers.jpg" data-title="Student volunteers at PRF-26, Le Méridien Paro" aria-label="Open photo: student volunteers at PRF-26">
+              <img src="assets/experience/prf26-volunteers.jpg" alt="Student volunteers in Bhutanese dress in front of the PRF-26 banner" loading="lazy" />
+              <span class="cert-zoom">⤢ View</span>
+            </button>
+            <button type="button" class="photo-thumb" data-full="assets/experience/prf26-networking.jpg" data-title="With delegates and officials at the PRF-26 evening reception" aria-label="Open photo: PRF-26 reception">
+              <img src="assets/experience/prf26-networking.jpg" alt="Volunteers with delegates and officials at the PRF-26 reception" loading="lazy" />
+              <span class="cert-zoom">⤢ View</span>
+            </button>
+          </div>
+        </article>
+
+        <article id="exp-ctf" class="exp-card reveal">
+          <div class="exp-info">
+            <div class="exp-top">
+              <span class="exp-badge winner">🏆 1st Place · Winner</span>
+              <span class="exp-badge ctf">Competition</span>
+              <span class="exp-date">2-day event</span>
+            </div>
+            <h3>Winner — National CTF 2026 (Capture the Flag)</h3>
+            <p class="exp-org">Organised by GovTech Agency · representing Jigme Namgyel Engineering College</p>
+            <p>
+              Competed in a two-day cybersecurity Capture the Flag challenge against teams from
+              <strong>GCIT</strong>, <strong>JNEC</strong> and the <strong>College of Science and Technology (CST)</strong>.
+              The challenges tested our technical skills, problem-solving and ability to think like both attackers and defenders.
+              <strong>My team won first place</strong> representing JNEC.
+            </p>
+            <ul class="exp-points">
+              <li>Worked as a team to solve a series of cybersecurity challenges</li>
+              <li>Approached problems from both the attacker's and the defender's point of view</li>
+              <li>Built on my CTF practice with CyLab Security Academy and TryHackMe</li>
+            </ul>
+            <ul class="tech"><li>Cybersecurity</li><li>CTF</li><li>Problem Solving</li><li>Teamwork</li></ul>
+          </div>
+
+          <div class="tour-media">
+            <div class="ctf-visual" aria-hidden="true">
+            <div class="ctf-head">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="ctf-title">ctf@govtech: ~/challenges</span>
+            </div>
+            <div class="ctf-body">
+              <svg class="ctf-flag" viewBox="0 0 64 64"><path class="pole" d="M14 6v54"/><path class="cloth" d="M14 8c8-4 14 4 22 0s12-2 16 0v22c-4-2-8-4-16 0s-14-4-22 0z"/></svg>
+              <p class="ctf-line l1"><span class="p">$</span> start --teams GCIT JNEC CST</p>
+              <p class="ctf-line l2"><span class="tag atk">[ATTACK]</span> recon → find the weakness</p>
+              <p class="ctf-line l3"><span class="tag def">[DEFEND]</span> analyse → patch → protect</p>
+              <p class="ctf-line l4"><span class="tag ok">[ OK ]</span> challenge solved · flag{******}</p>
+              <p class="ctf-line l5"><span class="tag win">[ WIN ]</span> JNEC team · 1st place 🏆</p>
+              <div class="ctf-score"><span>Day 1</span><div class="bar"><i></i></div><span>Day 2</span></div>
+            </div>
+          </div>
+            <div class="tour-gallery">
+              <button type="button" class="photo-thumb" data-full="assets/experience/ctf-winners.jpg" data-title="National CTF 2026 — JNEC teams with certificates, including the winning team" aria-label="Open photo: CTF winners with certificates">
+                <img src="assets/experience/ctf-winners.jpg" alt="JNEC CTF teams holding Winner and runner-up certificates in front of the college" loading="lazy" />
+                <span class="cert-zoom">⤢ View</span>
+              </button>
+              <button type="button" class="photo-thumb" data-full="assets/experience/ctf-group.jpg" data-title="National CTF 2026 participants at Jigme Namgyel Engineering College" aria-label="Open photo: CTF participants at JNEC">
+                <img src="assets/experience/ctf-group.jpg" alt="CTF participants and faculty at Jigme Namgyel Engineering College" loading="lazy" />
+                <span class="cert-zoom">⤢ View</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article id="exp-jst" class="exp-card reveal">
+          <div class="exp-info">
+            <div class="exp-top">
+              <span class="exp-badge intl">International Exchange</span>
+              <span class="exp-date">Japan</span>
+            </div>
+            <h3>Participant — Science &amp; Technology Exchange Program in Japan</h3>
+            <p class="exp-org">Administered by the Japan Science and Technology Agency (JST)</p>
+            <p>
+              Selected to take part in a prominent international initiative that invites outstanding youth, students and
+              young professionals to Japan for short-term <strong>science and technology exchanges</strong>. Bhutanese
+              students take part through bilateral nominations and dedicated application tracks.
+            </p>
+            <ul class="exp-points">
+              <li>Represented Bhutan in an international science and technology exchange</li>
+              <li>Gained exposure to Japan's science and technology</li>
+            </ul>
+            <ul class="tech"><li>International Exchange</li><li>Science &amp; Technology</li><li>Cross-cultural Communication</li></ul>
+          </div>
+
+          <div class="jst-visual" aria-hidden="true">
+            <svg viewBox="0 0 320 200">
+              <defs>
+                <linearGradient id="routeGrad" x1="0" x2="1"><stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#ef4444"/></linearGradient>
+              </defs>
+              <g class="grid-dots"></g>
+              <path id="jstRoute" d="M70 140 C 130 30, 210 30, 255 95" class="route"/>
+              <!-- Bhutan -->
+              <g transform="translate(70 140)">
+                <circle r="22" class="pin-ring"/><circle r="7" class="pin bt"/>
+                <text y="42" class="city">Bhutan</text>
+              </g>
+              <!-- Japan -->
+              <g transform="translate(255 95)">
+                <circle r="22" class="pin-ring jp"/><circle r="7" class="pin jp"/>
+                <text y="42" class="city">Japan</text>
+              </g>
+              <!-- plane -->
+              <g class="plane">
+                <path d="M-9 0 L9 0 M2 -7 L6 0 L2 7 M-7 -3 L-9 0 L-7 3" />
+                <animateMotion dur="5s" repeatCount="indefinite" rotate="auto"><mpath href="#jstRoute"/></animateMotion>
+              </g>
+              <text x="160" y="24" class="caption">JST · science &amp; technology exchange</text>
+            </svg>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Certificates ===== -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">~/certificates</span>
+          <h2>Certificates</h2>
+        </div>
+
+        <div class="filter-bar reveal" aria-label="Filter certificates">
+          <button class="filter-btn cert-filter active" data-cert="all">All <span class="count">5</span></button>
+          <button class="filter-btn cert-filter" data-cert="cisco">Cisco <span class="count">2</span></button>
+          <button class="filter-btn cert-filter" data-cert="coursera">Coursera <span class="count">3</span></button>
+        </div>
+
+        <div class="cert-grid">
+          <article id="cert-ccna-itn" class="cert-tile reveal" data-cat="cisco">
+            <button type="button" class="cert-thumb" data-full="assets/certs/ccna-itn.jpg" data-title="CCNA: Introduction to Networks" aria-label="Open certificate: CCNA: Introduction to Networks">
+              <img src="assets/certs/ccna-itn.jpg" alt="Certificate: CCNA: Introduction to Networks" loading="lazy" />
+              <span class="cert-zoom">⤢ View</span>
+            </button>
+            <div class="cert-body">
+              <span class="cert-issuer cisco">Cisco Networking Academy</span>
+              <h3>CCNA: Introduction to Networks</h3>
+              <p>Jigme Namgyel Engineering College (RUB) via Cisco Networking Academy</p>
+              <div class="cert-meta">
+                <span class="cert-date">27 Jul 2026</span>
+                <a href="assets/certs/ccna-itn.pdf" target="_blank" rel="noopener" class="link">View PDF ↗</a>
+              </div>
+            </div>
+          </article>
+          <article id="cert-ccna-srwe" class="cert-tile reveal" data-cat="cisco">
+            <button type="button" class="cert-thumb" data-full="assets/certs/ccna-srwe.jpg" data-title="CCNA: Switching, Routing, and Wireless Essentials" aria-label="Open certificate: CCNA: Switching, Routing, and Wireless Essentials">
+              <img src="assets/certs/ccna-srwe.jpg" alt="Certificate: CCNA: Switching, Routing, and Wireless Essentials" loading="lazy" />
+              <span class="cert-zoom">⤢ View</span>
+            </button>
+            <div class="cert-body">
+              <span class="cert-issuer cisco">Cisco Networking Academy</span>
+              <h3>CCNA: Switching, Routing, and Wireless Essentials</h3>
+              <p>Jigme Namgyel Engineering College (RUB) via Cisco Networking Academy</p>
+              <div class="cert-meta">
+                <span class="cert-date">27 Jul 2026</span>
+                <a href="assets/certs/ccna-srwe.pdf" target="_blank" rel="noopener" class="link">View PDF ↗</a>
+              </div>
+            </div>
+          </article>
+          <article id="cert-linux" class="cert-tile reveal" data-cat="coursera">
+            <button type="button" class="cert-thumb" data-full="assets/certs/linux-admin.jpg" data-title="Becoming a Linux Server Admin" aria-label="Open certificate: Becoming a Linux Server Admin">
+              <img src="assets/certs/linux-admin.jpg" alt="Certificate: Becoming a Linux Server Admin" loading="lazy" />
+              <span class="cert-zoom">⤢ View</span>
+            </button>
+            <div class="cert-body">
+              <span class="cert-issuer coursera">Coursera · Packt</span>
+              <h3>Becoming a Linux Server Admin</h3>
+              <p>Packt, offered through Coursera</p>
+              <div class="cert-meta">
+                <span class="cert-date">13 Sep 2026</span>
+                <a href="https://coursera.org/verify/3QW9PU11UR4B" target="_blank" rel="noopener" class="link">Verify ↗</a>
+              </div>
+            </div>
+          </article>
+          <article id="cert-laravel" class="cert-tile reveal" data-cat="coursera">
+            <button type="button" class="cert-thumb" data-full="assets/certs/laravel-php.jpg" data-title="Master Full-Stack Web Development with Laravel &amp; PHP" aria-label="Open certificate: Master Full-Stack Web Development with Laravel &amp; PHP">
+              <img src="assets/certs/laravel-php.jpg" alt="Certificate: Master Full-Stack Web Development with Laravel &amp; PHP" loading="lazy" />
+              <span class="cert-zoom">⤢ View</span>
+            </button>
+            <div class="cert-body">
+              <span class="cert-issuer coursera">Coursera · Board Infinity</span>
+              <h3>Master Full-Stack Web Development with Laravel &amp; PHP</h3>
+              <p>Board Infinity, offered through Coursera</p>
+              <div class="cert-meta">
+                <span class="cert-date">15 Sep 2026</span>
+                <a href="https://coursera.org/verify/MGK2DFYI4SSK" target="_blank" rel="noopener" class="link">Verify ↗</a>
+              </div>
+            </div>
+          </article>
+          <article id="cert-tkinter" class="cert-tile reveal" data-cat="coursera">
+            <button type="button" class="cert-thumb" data-full="assets/certs/python-tkinter.jpg" data-title="Python Tkinter: Design, Build &amp; Integrate GUIs" aria-label="Open certificate: Python Tkinter: Design, Build &amp; Integrate GUIs">
+              <img src="assets/certs/python-tkinter.jpg" alt="Certificate: Python Tkinter: Design, Build &amp; Integrate GUIs" loading="lazy" />
+              <span class="cert-zoom">⤢ View</span>
+            </button>
+            <div class="cert-body">
+              <span class="cert-issuer coursera">Coursera · EDUCBA</span>
+              <h3>Python Tkinter: Design, Build &amp; Integrate GUIs</h3>
+              <p>EDUCBA, offered through Coursera</p>
+              <div class="cert-meta">
+                <span class="cert-date">23 Sep 2026</span>
+                <a href="https://coursera.org/verify/Z23Z89VFNVG2" target="_blank" rel="noopener" class="link">Verify ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate viewer -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer" hidden>
+      <button type="button" class="lb-close" id="lbClose" aria-label="Close">✕</button>
+      <figure>
+        <img id="lbImg" src="" alt="" />
+        <figcaption id="lbCaption"></figcaption>
+      </figure>
+    </div>
+
+    <!-- ===== 6. Contact ===== -->
+    <section class="section alt" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-num">~/contact</span>
+          <h2>Contact</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p>I'm open to internships, collaborative projects and learning opportunities. Feel free to reach out!</p>
+            <a class="contact-item" href="mailto:klhamo2414@gmail.com">
+              <span class="ci-icon">✉</span>
+              <span><small>Email</small>klhamo2414@gmail.com</span>
+            </a>
+            <a class="contact-item" href="tel:+97577406154">
+              <span class="ci-icon">☎</span>
+              <span><small>Phone</small>+975 77406154</span>
+            </a>
+            <div class="contact-item">
+              <span class="ci-icon">⌂</span>
+              <span><small>Location</small>Taba, Thimphu, Bhutan</span>
+            </div>
+            <a class="contact-item" href="https://github.com/05250179jnec-arch" target="_blank" rel="noopener">
+              <span class="ci-icon">&lt;/&gt;</span>
+              <span><small>GitHub</small>github.com/05250179jnec-arch</span>
+            </a>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <small class="error"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <small class="error"></small>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+              <small class="error"></small>
+            </div>
+            <button type="submit" class="btn btn-primary full">Send Message</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Kuenzang Lhamo. Built with HTML, CSS &amp; JavaScript.</p>
+      <a href="#home" class="back-top" id="backTop" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="js/network-bg.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/lab.js"></script>
+  <script src="js/certificates.js"></script>
+  <script src="js/druk.js"></script>
+  <script src="js/skillmap.js"></script>
+  <script src="js/motion.js"></script>
+</body>
+</html>
